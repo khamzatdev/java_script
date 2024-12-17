@@ -1,0 +1,1256 @@
+Qiymat - eng kichik kurinishdagi malumot yoki malumot buladi
+O'zgaruvchi(variable) - o'zida ma'lum bir qiymat saqlovchi konteyner
+
+Javascriptda qiymatlar ikki turga bulinadi primite va object 
+
+Primitive qiymat tugridan tugri uzgaruvchi murojaat qiladigan manzilda joylashadi
+1.Number - sonlarni uzida saqlovchi malumot turi 
+2.String - Uzida belgilar ketma-ketligini saqlovchi malumot turi
+3.Boolean - mantiqiy malumot bulib faqatgina true yoki false qiymatini qabul qiladi
+4.Undefined - hali aniqlanmagan malumot
+5.Null - bus qiymatga ega malumot turi
+6.Symbol- yaqona(uniqe) va uzgarmas qiymatga ega buluvchi ma'lumot turi
+7.BigInt - katta sonlarni saqlovchi malumot  turi
+
+Javascript  dynamic typing funksiyasiga ega bulib uning yordamida uzgaruvchi saqlovchi 
+    malumot turini kursatmasdan ham qiymat saqlashimiz mumkin Uzgaruvchi saqlaydigan
+    malumot turi avtomatik tarzda aniqlanadi
+
+Object qiymat uzgaruvchi murojaat qilgan manzilda kursatilgan boshqa manzilda saqlanadi
+1.Function - 
+2.Array - 
+3.Object - 
+
+Let - dasturimiz ishlashi davomida uzgarishi mumkin bulgan uzgaruvchilarni elon qilish uchun foydalaniladi
+
+Const - dasturimiz ishlashi davomida uzgarmaydigan uzgaruvchilarni elon qilish uchun foydalanuvchi
+const yordamida elon qilingan uzgaruvchilar har doim boshlangich qiymatga ega bulishi shart
+
+
+Var - ES6 ga qadar uzgaruvchilarni elon qilish uchun ishlatilingan kalit soz.let bilan 
+    deyarli bir xil vazifani bajargan
+
+let va var uxshash bulishiga qaramasdan ularning ma'lum bir farqlari mavjud 
+    var yordamida elon qilingan uzgaruvchining kurinishi kulami (scope) funksiyasi
+    darajasida bulsa let esa blok darajada kurinadi 
+
+Javascript yordamida hech qanday kalit suzi kursatilmasdan uzgaruvchi yaratish
+    imkoniyati mavjud lekin bu kurinishdagi uzgaruvchilar yaratish tavsiya etilmaydi
+
+Strict mode - xatolardan qochish uchun imkoniyati mavjud strict mode bilan!
+
+
+Operatorlar
+
+    Operatorlar bir yoki bir nechta operandlar ustida amal bajaradi. Umumiy
+    ko'rinishi quyidagicha
+
+    Javascript dasturlash tilida arifmetik operatorlardan foydalanib ikki operand ustida arifmetik amallar bajarish imkoniyati mavjud
+
+    Operator 
+    Tavsifi 
+    Misol
+    
+    Ikki operandi qo'shish 
+    son1 + son2
+
+    O'ng tomondagi operandni chap tarafdan ayirish 
+    son1 - son2
+    
+    Ikki operandi ko'paytirish 
+    son1 * son2
+    
+    Chap operandni o'ng operandga bo'lish. 
+    son1 / son2
+    
+    Modulus operatori. Ikki operanddan qoldiqni qaytarish 
+    son1 % son2
+
+    Kattalashtirish (increment) operatori. Operand qiymatini bittaga oshirish.
+    son1++ yoki 
+    ++son1
+
+    Kichiklashtirish (decrement) operatori. Operand qiymatini bittaga kamaytirish.
+    son2-- yoki — son2
+
+
+Solishtirish (comparison) operatorlar 
+Javascript dasturlash tilida comparison operatorlardan foydalanib ikki operandlarni solishtirish imkoniyati mavjud. Bunday operatorlar 
+
+   true  yoki  false qiymatini qaytaradi. 
+
+Operator 
+Tavsifi 
+Misol
+
+Turini hisobga olmagan holda ikkita operandning tengligini solishtirish
+variable1 == variable2
+ 
+Turi va qiymati bo'yicha ikkita operandning tengligini solishtirish.
+variable1 === variable2
+ 
+Ikki operand notengligini (teng emasligini) tekshirish. 
+variable1 != variable2
+
+Chap tarafdagi qiymat o'ngdagi qiymatdan katta bo'lsa, true qiymatni qaytaradi; aks holda, false qaytaradi.
+variable1 > variable2
+
+Chap tarafdagi qiymat o'ngdagi qiymatdan kichik bo'lsa, true qiymatini qaytaradi; aks holda, false qaytaradi.
+variable1 < variable2
+
+Chap tarafdagi qiymat o'ngdagi qiymatdan katta yoki teng bo'lsa, true qiymatni qaytaradi; aks holda, false qaytaradi.
+variable1 >= variable2
+
+Chap tarafdagi qiymat o'ngdagi qiymatdan kichik yoki teng bo'lsa, true qiymatini qaytaradi; aks holda, false qaytaradi.
+variable1 <= variable2
+
+
+Tayinlash (assignment) operatorlar
+
+Javascript'dagi tayinlash operatorlaridan foydalanib o'zgaruvchilarga qisqartma ko'rinishida yangi qiymatlar tayinlash imkoniyati mavjud
+
+ 
+Chap operandga o'ng operand qiymatini belgilaydi. 
+variable1 = variable2
+
+Chap va o'ng operand qiymatlarini umumlashtirib (qo'shib) va natijani chap operandga tayinlaydi.
+variable1 += variable2
+
+Chap operand qiymatidan o'ng operand qiymatini olib tashlab va natijani chap operandga tayinlaydi.
+variable1 -= variable2
+
+Chap va o'ng operand qiymatlarini ko'paytirib va natijani chap operandga tayinlaydi.
+variable1 *= variable2
+
+Chap operand qiymatini o'ng operand qiymatiga bo'lib va natijani chap operandga tayinlaydi.
+variable1 /= variable2
+
+Chap operand modulini o'ng operandga bo'linishini olib va qoldiqni chap operandga tayinlaydi.
+variable1 %= variable2
+
+
+
+Boolean logic (mantiq) 
+    Dasturlar o'zida ma'lum bir solishtirishlar orqali qaror qabul qiladi. Boolean
+    mantiq - algebraning bir qismi bo'lib, barcha qiymatlar True (rost) 
+    yoki False (yolg'on) qiymatlardan tashkil topgan bo'ladi. Bu qiymatlar ma'lum
+    bir shartni tekshirishda ishlatilinadi. Boolean logic asosiy uch operatordan tashkil topgan: AND, OR va NOT. 
+
+AND operatori 
+    Agar barcha qiymatlar True'dan tashkil topgan bo'lsa, natijaviy qiymat True
+    bo'ladi, aks holda False qiymati yuzaga keladi 
+
+OR operatori
+    Agar hech bo'lmasa bir qiymat True'dan tashkil topgan bo'lsa, natijaviy qiymat
+    True bo'ladi, ask holda False qiymati yuzaga keladi 
+
+NOT operatori 
+    Berilgan qiymat True bo'lsa False, False bo'lsa esa True qiymati yuzaga keladi. Boshqacha qilib aytganda berilgan qiymatni teskarisiga o'girib 
+    beradi 
+
+Type conversion - Javascript dasturlash tilida saqlanayotgan ma'lumot turini bie ko'rinishdan
+    ikkinchi kurinish utkazish
+
+Number - primitiv o'rab turuvchi obyektidan foydalanib, berilgan ma'lumot
+    turini son ko'rinishiga o'tkazish imkoniyati mavjud. Agar berilgan ma'lumot
+    son ko'rinishiga o'tkazishni imkoni bo'lmasa, NaN maxsus qiymati yuzaga
+    keladi.
+
+    const yosh = '23'; // String
+    console.log(yosh); // String
+    console.log(Number(yosh)); // Number
+    console.log(yosh + 1); // 231 (concatenation)
+    console.log(Number(yosh) + 1); // 24
+    const ism = 'Ulugbek';
+    console.log(Number(ism)); // NaN
+
+
+String - String - primitiv o'rab turuvchi obyektidan foydalanib, berilgan ma'lumot
+    turini string ko'rinishiga o'tkazish imkoniyati mavjud.
+
+    const yil = 2021; // Number
+    console.log(yil); // Number
+    console.log(String(yil)); // String
+
+Type coercion - Javascript dasturlash tilida operator turli xil qiymatlar
+    ustida ish olib borayotganda, ulardan birining avtomatik ravishda boshqa
+    turga o'tishi. Boshqa qilib aytganda ma'lumot turini avtomatik ravishda bir
+    ko'rinishdan ikkinchi ko'rinishga o'tishi.
+
+    console.log('Men ' + 1997 + 'chi yilda tavallud topganman'); // auto string conversion
+
+    Auto number conversion
+    console.log('30' - '10' - 5); // auto number conversion
+
+
+ Truthy va Falsy 💼
+
+       Javascript dasturlash tilida berilgan qiymatni Boolean ko'rinishga
+        o'tkazilganda, ular Truthy yoki Falsy ko'rinishga keladi. Truthy bu true
+        ya'ni rost qiymatiga ega bo'lgan ma'lumotlar, Falsy esa false qiymatiga
+        ega bo'lganlarga aytiladi.
+
+        Falsy ko'rinishga keladigan qiymatlar
+
+        false
+        0
+        ''
+        undefined
+        null
+        NaN
+        0n
+
+    const ism = '';
+    if (ism) {
+        console.log('Sizning ismingiz: ' + ism);
+        } else {
+        console.log('Iltimos ism kiriting');
+        }
+
+
+Funksiya 💼
+
+   Funksiya - Javascript dasturlash tilining asoslaridan biri bo'lib uning
+    yordamida ma'lum bir vazifani bajarish imkoni mavjud. Funksiya boshqa
+    bir kod qismda chaqirilganda ish tushadi. Funksiya yordamida kodni
+    qayta ishlatish imkoniyati mavjud ya'ni bir martta e'lon qilib, bir necha
+    joyda ishlatish imkoni mavjud.
+
+    Function declaration - function ka'lit so'zi yordamida e'lon qilinadi va
+        berilgan scope bo'yicha ko'rinishga ega bo'ladi.
+        bu funksiyani elon qilishdan oldin ham ishga tushirish mumkin
+
+        console.log(kvadrat(3))
+        function kvadrat(son){
+            return son * son
+        }
+        console.log(kvadrat(10))
+
+    Function expression
+        💡 Function expression - function ka'lit so'zi yordamida e'lon qilinadi va
+        ma'lum bir o'zgaruvchiga tenglab qo'yiladi
+        va uni elon qilishdan oldin ishga tushirib bulmaydi
+
+        const kvadrat = function(son){
+            return son * son
+        }
+        console.log(kvadrat(26))
+
+    Arrow function 💼
+        💡 Arrow function - function expression yozishning qisqaroq ko'rinishi.
+        Bunday turdagi funksiyalarni yozishni turli xil yo'llari mavjud.
+
+        1. Function expressionga juda o'xshash bo'lib, faqatgina arrow (=>) belgisiga ega
+        bo'ladi.
+        const kvadrat = (son) => {
+            return son * son
+        }
+        kvadrat(10);
+        console.log(kvadrat(10))
+
+        2. Agar funksiya tana qismi bir statement'dan iborat bo'lsa, return ka'lit so'zini
+        yozmaslik mumkun
+
+        const kvadrat = son => son * son;
+        console.log(kvadrat(10))
+
+        3. Agar funksiya hech qanday parametrga ega bo'lmasa
+
+        const print = () => console.log("Printing...");
+        print();
+
+        4. Ikki yoki undan ko'p parametrlarga ega bo'lgan funksiya uchun, parametrlar
+        qavslar ichida bo'lishi shart
+            
+            const volume = (a,b,c) => a*b*c;
+            console.log(volume(1,3,4))
+
+ 
+    Berilgan sonni juft yoki toq ekanligini aniqlab beradigan funksiya tuzish.
+
+        //Function declaration 
+            function evenOrOddDec(number){
+                if(number % 2 === 0){
+                    console.log(`${number} is even`)
+                }else{
+                    console.log(`${number} is odd`)
+                }
+            }
+            evenOrOddDec(0)
+        // Arrow function
+                const evenOrOddDec = number =>{
+                    if(number % 2 === 0){
+                        console.log(`${number} is even`)
+                    }else{
+                        console.log(`${number} is odd`)
+                    }
+                }
+                evenOrOddDec(9)
+
+    Berilgan ikki sondan kattasini qaytaradi funksiya yozing 
+        //Function declaration
+         function maxDec(number1,number2){
+            if(number1>=number2){
+                return number1;
+            }
+            return number2;
+        }
+         console.log(maxDec(1,4))
+        
+        Arrow function
+        const maxArrow = (number1,number2) =>{
+            if(number1 >= number2){
+                return number1
+            }
+            return number2
+        }
+        console.log(maxArrow(3,5))
+    
+    Berilgan sonni teskarisiga ugirib qaytaradigan funksiya yozish
+        // Function declaration 
+            function reverseDec(number){
+                const numberStr = String(number);
+                const reversStr = numberStr.split('').reverse().join('');
+                return Number(reversStr)
+            }
+            console.log(reverseDec(78))
+    
+        // Functoion expression
+            const reverseDec = function(number){
+                const numberStr = String(number);
+                const reverseDec = numberStr.split('').reverse().join('');
+                return Number(reverseDec)
+            }
+            console.log(reverseDec(98))
+
+ Array
+    Array - bir vaqtning o'zida bir nechta qiymatlarni o'zida saqlashi mumkin
+        bo'lgan obyekt. Quyida languages nomli, 3 elementdan tashkil topgan
+        array ko'rsatilgan.
+
+
+        Array yaratish
+            Array literal ko'rinishida
+
+            💡 Array yaratishning eng oson usuli array literal hisoblanib, to'rtburchak
+            qavslar ([]) dan foydalanib yaratiladi.
+
+            const languages = ['js', 'java', 'go'];
+
+            New kalit so'zidan foydalanib
+
+            💡 Javascript dasturlash tilidan array'larni new kalit so'zidan foydalanib
+            ham yaratish imkoniyati mavjud.
+
+            const languages = new Array('js', 'java', 'go');
+
+            💡 Array o'z ichida turli xil qiymatlarni saqlashi mumkin
+
+            // bo'sh array
+            const emptyArray = [ ];
+            // sonlar array'i
+            const sonArray = [1, 2, 9, -2];
+            // stringlar array'i
+            const stringArray = [ 'Javascript', 'Java', 'Go'];
+            // aralash qiymatlardan tashkil topgan array
+            const mixedArray = ['Javascript', 2, false, null];
+
+
+        Array elementini olish
+
+             Array elementlarini uning index'laridan foydalanib olish mumkin.
+
+             Array elementlarining raqamlanishi 0 dan boshlanadi
+
+            const helloArray = ['h', 'e', 'l', 'l', 'o'];
+
+            // birinchi element
+            console.log(helloArray[0]); // "h"
+
+            // uchinchi element
+            console.log(helloArray[2]); // "e"
+
+        Array'ga element qo'shish
+
+             Array'ga element qo'shish uchun push() yoki unshift() array
+            metodlaridan foydalanish mumkin
+
+            push() metodi yordamida array oxiriga element qo'shish mumkin
+
+            const languages = ['js', 'java'];
+            languages.push('go');
+            console.log(languages); // ['js', 'java', 'go']
+
+            unshift() metodi yordamida array boshiga element qo’shish mumkin
+
+            const languages = ['js', 'java'];
+            languages.unshift('go');
+            console.log(languages); // ['go', 'js', 'java']
+
+        Array elementini o’zgartirish
+
+            Array index’laridan foydalanib, uning element qiymatini o’zgartirish
+            imkoniyati mavjud
+
+            const languages = [ 'js', 'java', 'go'];
+            languages[1] = 'swift';
+            console.log(languages); // ['js', 'swift', 'go']
+
+        Array elementini o’chirish
+
+            pop() metodidan foydalanib array ichidagi oxirgi elementni o’chirish
+            imkoniyati mavjud. Method o’chirilgan elementni qaytaradi
+
+            const languages = ['js', 'java', 'go', 'swift'];
+            const deletedLanguage = languages.pop();
+            console.log(languages); // ['js', 'java', 'go']
+            console.log(deletedLanguage); // swift
+
+            💡 shift() metodidan foydalanib array ichidagi birinchi elementni
+            o’chirish imkoniyati mavjud. Metod o’chirilgan elementni qaytaradi
+
+            const languages = ['js', 'java', 'go', 'swift'];
+            const deletedLanguage = languages.shift();
+            console.log(languages); // ['java', 'go', 'swift']
+            console.log(deletedLanguage); // js
+
+        Array uzunligini aniqlash
+
+            💡 Array uzunligi ya’ni uning ichidagi elementlar sonini aniqlash uchun
+            length xossasidan foydalaniladi
+
+            const languages = [ 'js', 'java', 'go'];
+            console.log(languages.length); // 3
+
+
+
+         Methods
+
+            Javascript dasturlash tilida array bilan ishlashni osonlashtiradigan
+            maxsus method’lar mavjud.
+
+         Array method’lari
+
+            Method Tavsifi Immutable
+            (o'zgarmas)
+
+            concat() 2 yoki undan ortiq array’larni birlashtirib, natijani qaytaradi
+            indexOf() array’ni ichidan elementni izlab, uning joylashgan o’rnini (index)
+            qaytaradi
+
+            find() birinchi bo’lib shartni bajargan array elementini qaytaradi. Array
+            ichidagi elementni qidirishda foydalaniladi
+
+            findIndex()
+            birinchi bo’lib shartni bajargan array elementini joylashga o’rnini
+            (index) qaytaradi. Array ichidagi elementni joylashgan joyini
+            topishda foydalaniladi
+
+            forEach() har bir element uchun berilgan funksiyani chaqiradi
+
+            map() har bir massiv elementi uchun berilgan funksiyani chaqirib, yangi
+            array yaratadi
+
+            filter() berilgan shartni bajargan elementlarni saralab olib, yangi massiv
+            yaratadi
+
+            includes() massivda ko’rsatilgan element mavjudligini tekshiradi
+
+            push() massiv oxiriga yangi elementni qo’shadi va massivning yangi
+            uzunligini qaytaradi
+
+            
+            Method Tavsifi Immutable
+            (o'zgarmas)
+
+            unshift() massiv boshiga yangi element qo'shadi va massivning yangi
+            uzunligini qaytaradi
+
+            pop() massivning oxirgi elementini olib tashlaydi va olib tashlangan
+            elementni qaytaradi
+
+            shift() massivning birinchi elementini olib tashlaydi va olib tashlangan
+            elementni qaytaradi
+
+            sort() elementlarni alfavit tartibida, satrlar sifatida va o'sish tartibida
+            tartiblaydi
+
+            slice() massivning ko’rsatilgan qismini tanlab, qaytaradi
+
+            splice() massivdagi mavjud elementlarni olib tashlaydi yoki almashtiradi
+            va/yoki yangi elementlarni qo'shadi
+
+                MISOLLAR
+                // concat()
+                const array1 = [1, 4];
+                const array2 = [2, 3, 7];
+                const result = array1.concat(array2);
+                console.log(result); // [1, 4, 2, 3, 7]
+
+                // find()
+                const findValue = (number) => number === 2;
+                const foundValue = result.find(findValue);
+                console.log(foundValue); // 2
+
+                // filter()
+                const filterValues = number => number > 5;
+                const filteredValues = result.filter(filterValues);
+                console.log(filteredValues); // 7
+
+                // map()
+                const mapValues = number => 'Son: ' + number;
+                const mappedValues = result.map(mapValues);
+                console.log(mappedValues); // ['Son: 1', 'Son: 4', ...]
+
+                const sortValues = (number1, number2) => number1 - number2;
+                result.sort();
+                console.log(result); // [1, 2, 3, 4, 7];
+
+Objects
+
+     💡 JavaScript object - bir nechta ma'lumotlar to'plamini saqlashga imkon
+        beruvchi ma’lumot turi (data-type).
+
+        const dasturchi = {
+        ism: 'Ulugbek',
+        yosh: 24
+        }
+
+        Object e’lon qilish (yaratish)
+
+        💡 Obyektlar figuralik qavslar ({}) yordamida yaratilinib, har bir xossasi
+        (property) kalit:qiymat ko’rinishiga ega bo’ladi.
+
+        const dasturchi = {
+        ism: 'Ulugbek',
+        yosh: 24
+        }
+        console.log(typeof dasturchi);
+
+        Xossaning qiymatini kalit yordamida olish imkoniyati mavjud 
+            Buning uchun nuqta (.) belgisidan foydalanamiz
+
+        const dasturchi = {
+        ism: 'Ulugbek',
+        yosh: 24
+        }
+        console.log(dasturchi.ism)
+            Yana bir yuli turt burchak qavs orqali qilishimiz nuqtaning urniga
+
+         Nested (ichma-ich) object’lar
+
+            Object ichida boshqa object’ni saqlashi mumkin
+            const dasturchi = {
+                ism: 'Ulugbek',
+                yosh: 24,
+                manzil: {
+                mamlakat: 'Uzbekistan',
+                shahar: 'Tashkent',
+                uy: 7
+                }
+                }
+                console.log(dasturchi.manzil);
+                console.log(dasturchi.manzil.shahar);
+
+            Object method’lari
+
+             Object o’z ichida funksiyalar saqlashi mumkin va ular method’lar deb
+                nomlanadi
+
+                const dasturchi = {
+                ism: 'Ulugbek',
+                yosh: 24,
+                salomlashish: function() {
+                console.log('Salom!');
+                }
+                }
+                dasturchi.salomlashish();
+
+
+         Method
+
+          JavaScript method - funksiya qiymatiga ega boʻlgan obyekt xususiyati
+
+         this ka’lit so’zi
+
+            💡 Method ichida obyektning xususiyatlarini ishlatish uchun this ka’lit
+            so’zidan foydalaniladi
+
+            const dasturchi = {
+                ism: 'Ulugbek',
+                yosh: 24,
+                salomlashish: function() {
+                console.log('Salom! Mening ismim ' + this.ism);
+                }
+                }
+                dasturchi.salomlashish();
+
+             Maxsus method’lar
+                Object.keys()
+
+                💡 Object.keys() - berilgan obyektning ka’litlar ro’yhatini qaytaruvchi
+                maxsus funksiya
+
+                const dasturchi = {
+                ism: 'Ulugbek',
+                yosh: 24
+                }
+                console.log(Object.keys(dasturchi)); // ['ism', 'yosh']
+
+                Object.values()
+
+                💡 Object.values() - berilgan obyektning qiymatlar ro’yhatini qaytaruvchi
+                maxsus funksiya
+                Yana bir qushimcha bulib entires u bizga objectdagi methodni array holatida qaytaradi
+                const dasturchi = {
+                ism: 'Ulugbek',
+                yosh: 24
+                }
+                console.log(Object.values(dasturchi)); // ['Ulugbek', 24]
+                console.log(Object.entires(dasturchi));
+                
+if / else 
+
+    Conditional statement
+    Conditional statement - Javascript dasturlash tilida berilgan shartga
+    ko’ra ma’lum bir oqimni ishga tushirish boshqacha qilib aytganda berilgan
+    shartga ko’ra ma’lum bir harakatni bajarishga aytiladi
+    
+    if suzini manosi AGAR degan manoni anglatadi
+
+        Javascript dasturlash tilida 2 asosiy conditional statement’lar mavjud:
+            bular if va switch
+            if - 3 qismga bo’linadi
+            if
+            if/else
+            if/else/if/else
+
+            switch
+
+            if statement
+                if statement qavs ichida berilgan shartga ko’ra qaror qabul qiladi: agar
+                shart rost (true) bo’lsa if bloki ishga tushadi, aks holda blok ichidagi kod
+                o’tkazib yuboriladi
+            const number = 2;
+                if (number > 0) {
+                console.log('Berilgan son musbat');
+                }
+                console.log("if'dan keyingi qator");
+
+             if/else statement
+                if statement shart ixtiyoriy ravishda else qismga ega bo’lishi mumkin:
+                agar shart rost (true) bo’lsa if bloki ishga tushadi, aks holda else bloki
+                ishga tushiriladi
+
+                const number = 2;
+                    if (number > 0) {
+                    console.log('Berilgan son musbat');
+                    } else {
+                    console.log('Berilgan son manfiy');
+                    }
+
+            if/else/if statement
+                💡 if/else statement odatda ikki holatdan birini ishga tushirish uchun
+                ishlatilinadi. Agar siz ikkitadan ko’p bo’lgan holatlarni o’z ichiga oladigan
+                shart yozmoqchi bo’lsangiz if/else/if statement’dan foydalanishingiz
+                mumkin: agar birinchi shart rost bo’lsa birinchi blok ishga tushadi, aks
+                holda ikkinchi blok shartga tekshiriladi.
+
+                const number = 2;
+                if (number > 0) {
+                console.log('Berilgan son musbat');
+                } else if (number === 0) {
+                console.log('Berilgan son 0');
+                } else {
+                console.log('Berilgan son manfiy');
+                }
+
+switch 
+    Javascript dasturlash tilida qaror qabul qilishda switch
+        statement’idan foydalaniladi. switch statement berilgan ifodani
+        baholab, shunga to’g’ri keluvchi kod blokni ishga tushirib yuboradi.
+
+         const number = 2;
+            let output;
+            switch (number) {
+            case 1:
+            output = 'bir';
+            break;
+            case 2:
+            output = 'ikki';
+            break;
+            default:
+            output = 'topilmadi';
+            break;
+            }
+            console.log(`Qiymat: ${output}`);
+            string ham tekshirish mumkin
+
+        break ka’lit so’zi ixtiyoriy. Agar break iborasi uchrasa, switch
+            operatori shu qismda ishini to’xtatadi. Agar break operatori
+            ishlatilmasa, mos keladigan holatdan keyingi holatlar ham ishga
+            tushiriladi.
+
+        default ka’lit so’zi ham ixtiyoriy bo’lib, agar ifoda tepada berilgan
+            case’larning hech biriga to’g’ri kelmasa, default blok ishga tushadi.
+
+
+For 
+    for
+        Javascript dasturlash tilida for loop’idan foydalanib ma’lum bir kod
+     blokini bir necha bor ishga tushirish imkoniyati mavjud.
+
+        Umumiy ko’rinishi
+            for (boshlangichIfoda; tekshiruvSharti; ifodaniYangilash) {
+            // for loop kod bloki (tanasi)
+            }
+
+        Boshlang’ich ifoda - o’zgaruvchi(lar)ni e’lon qilish uchun yoziladi va bir
+        martta ishga tushadi
+
+        Tekshiruv sharti - berilgan shart tekshiriladi va agar u rost (true) bo’lsa
+        berilgan kod blok ishga tushiriladi, aks holda ya’ni yolg’on (false) bo’lgan
+        holatda for loop tugatiladi
+
+        Ifodani yangilash - tekshiruv sharti rost bo’lgan holatda, boshlang’ich
+        ifoda yangilanadi
+
+                let sum = 0
+                    for(let i=0; i<=10; i++){
+                        console.log(i)
+                    }
+
+         for loop’dan foydalanib 1 dan 10 ga bo’lgan sonlar yig’indisini
+            hisoblang
+
+            let sum = 0
+                for(let i=0; i<=10; i++){
+                    sum += i; //sum=sum+i
+                }
+                console.log('Sum: ' + sum)
+
+     break     
+        break statement yordamida berilgan ma’lum bir shart bajarilgan
+        holatda loop’ni to’xtatish imkoniyati mavjud 
+        // birdan 5gacha bo'lgan sonlarni console'ga chiqaruvchi loop
+        for(let i=1; i<=5; i++){
+            // break condition
+            if(i==3){
+                break
+            }
+            console.log(i)
+        }
+
+     continue 
+        continue statement yordamida berilgan loop’ning joriy takrorlanishini
+        (iteratsiya) o’tkazib yuborish imkoniyati mavjud
+
+        // birdan 5gacha bo'lgan sonlarni console'ga chiqaruvchi loop
+            for (let i = 1; i <= 5; i++) {
+            // continue condition
+            if (i === 3) {
+            continue;
+            }
+            }
+            console.log(i);
+
+While 
+
+    Javascript dasturlash tilida ma’lum bir blok kodini bir necha martta
+        ishga tushirish uchun while statement’dan foydalanish mumkin. U for
+        loop bilan vazifasi deyarli bir xil bo’lib, faqatgina yozilishida (syntax)
+        farqi mavjud.
+
+        Umumiy ko’rinishi
+            while (tekshiruvSharti) {
+            // qaytariladigan blok kodi (tanasi)
+            }
+            Tekshiruv sharti - while loop berilgan tekshiruv shartini tekshirib ko’radi va
+            agar ifoda rost (true) bo’lsa berilgan kod blokini ishga tushiradi, aks holda
+            o’z ishini to’xtatadi
+            10marta salom dunyo suzini chiqarish
+            let i = 0
+            while(i < 10){
+                console.log('salom dunyo')
+                i++
+            }
+
+            1dan 10gacha sonlarni yigindisini hisobslah
+
+            let i = 1, sum =0
+                while(i <= 10){
+                sum += i;
+                i++;
+                }
+                console.log(`Summa: ${sum}`)
+
+
+        do/while
+
+            do/while statement while loop’ga juda ham o’xshash bo’lib, faqatgini
+            farqi do/while kamida bir martta ishga tushishi kafolatlangan
+
+            do {
+            // qaytariladigan blok kodi (tanasi)
+            } while (tekshiruvSharti)
+
+        
+            do/while loop’dan foydalanib “Salom dunyo” yozuvini 10 martta
+            ekranga chiqaring
+
+            let i = 0;
+            do {
+            console.log('Salom dunyo');
+            i++;
+            } while (i < 10)
+
+            for yoki while
+
+             Agar bizga berilgan kod blokni necha martta ishga tushirishimiz
+            oldindan ma’lum bo’lsa, unday holatlarda for loop’dan foydalangan
+            ma’qul
+
+            // bu loop 5 martta ishga tushadi
+            for (let i = 1; i <= 5; ++i) {
+            // berilgan loop tanasi (body)
+            }
+
+             Agar bizga berilgan kod blokni necha martta ishga tushirishimiz
+            nomalum bo’lsa, unday holatlarda while loop’dan foydalangan ma’qul
+
+            while (tekshiruvSharti) {
+            // berilgan loop tanasi (body)
+            }
+
+Amaliyot 
+
+        Kiritilgan son berilgan chegara (range) ichidaligini aniqlovchi dastur
+        tuzing
+
+
+            const inRange = (min,max, number) =>{
+            if(number >= min && number <= max){
+                console.log(`Berilgan ${number} soni ${max} orasida`)
+            } else{
+                console.log(`Berilgan ${number} soni ${max} orasida emas`)
+            }
+            }
+
+            const minRange = 10;
+            const maxRange = 30;
+            const givenNumber = 20;
+            inRange (minRange,maxRange,givenNumber)
+
+
+        Berilgan ikki son ustida ko’rsatilgan ariftmetik amalni bajaring va
+        natijasini console’ga chiqaring
+
+                const simpleCalculator = (num1, num2, oper) => {
+                switch (oper) {
+                    case "add":
+                        console.log(`Yig'indisi: ${num1 + num2}`);
+                        break;
+
+                    case "subtract":
+                        console.log(`Ayirmasi: ${num1 - num2}`);
+                        break;
+
+                    case "multiply":
+                        console.log(`Ko'paytmasi: ${num1 * num2}`)
+                        break;
+                        
+                    case "divide":
+                        console.log(`Bo'linmasi: ${num1 / num2}`)
+                        break;
+
+                    default:
+
+                        console.log('Aniqlanmagan amal');
+
+                }
+                }
+                const a = 20;
+                const b = 5;
+                const operation = "divide";
+                simpleCalculator(a, b, operation);
+
+
+                Berilgan massivdagi eng katta qiymatga ega bo’lgan elementni
+             ekranga chiqaruvchi dastur yozing
+
+                
+                    const getLargestElement = (array) => {
+                    let largest = array[0];
+                    for (let i = 1; i < array.length; i++) {
+                        if (array[i] > largest) {
+                            largest = array[i];
+                        }
+                    }
+                    return largest;
+                    }
+                    const nums = [6, 51, 7, 63, 37, 673, 38, 349, 127];
+                    const result = getLargestElement(nums);
+                    console.log(`Eng katta element: ${result}`);
+
+DOM 
+
+        DOM (Document Object Model) - dasturlash interfeysi bo’lib, u
+        yordamida hujjatda elementlar yaratish, o’zgartirish va o’chirish
+        imkonini beradi. Undan tashqari, elementlarga hodisalar (event)
+        qo’shish orqali, sahifamizni interaktiv qilish imkoniyati mavjud.
+
+        💡 DOM HTML hujjatini tugunlar daraxti (tree of nodes) sifatida ko'radi.
+        Tugun (node) HTML elementini ifodalaydi.
+
+        💡 DOM brauzer tomonidan avtomatik ravishda yaratilinadi
+
+
+        HTML hujjatdagi elementlarni bir necha yo’l bilan tanlab olish imkoni
+            avjud va bular DOM API orqali amalga oshiriladi
+
+        Element(lar)ni tanlab olish yo’llari
+            getElementByID - elementni ID orqali tanlab olish
+            getElementsByName - elementlarni nomi orqali tanlab olish
+            getElementsByClassName - elementlarni class nomi orqali tanlab olish
+            getElementsByTagName - elementlarni tag nomi orqali tanlab olish
+            querySelector - CSS selektor orqali elementni tanlab olish
+
+            getElementById - metodi orqali HTML hujjatimizdagi elementni ID
+                orqali tanlab olish imkoniyati mavjud
+
+                document.getElementById('idShuYergaYoziladi')
+
+            getElementsByName - metodi orqali HTML hujjatimizdagi
+                elementlarnini nomi tanlab olish imkoniyati mavjud
+
+                document.getElementsByName('elementNomiShuYergaYoziladi')
+
+            getElementsByClassName - metodi orqali HTML hujjatimizdagi
+                elementlarnini class nomi orqali tanlab olish imkoniyati mavjud
+
+                document.getElementsByClassName('elementNomiShuYergaYoziladi)
+
+
+            getElementsByTagName - metodi orqali HTML hujjatimizdagi
+                elementlarnini tag nomi orqali tanlab olish imkoniyati mavjud
+
+                document.getElementsByTagName('tagNomiShuYergaYoziladi')
+
+            querySelector - metodi orqali HTML hujjatimizdagi elementni CSS
+                selektor orqali tanlab olish imkoniyati mavjud
+
+                document.querySelector('CSSSelektorShuYergaYoziladi')
+
+            querySelectorAll - metodi orqali HTML hujjatimizdagi elementlarni
+                CSS selektor orqali tanlab olish imkoniyati mavjud
+
+                document.querySelectorAll('CSSSelektorShuYergaYoziladi')
+
+            Element matnini o’zgartirish
+
+            💡 Tanlab olingan element matnini o’zgartirish uchun elementning
+            maxsus textContent attributidan foydalanishimiz mumkin
+
+            const element = document.getElementById('elementId');
+            element.textContent = 'Yangi matn'
+            console.log(element)
+
+            Element qiymatini o’zgartirish
+
+            💡 Tanlab olingan element qiymatini o’zgartirish uchun elemetning
+            maxsus value attributidan foydalanishimiz mumkin
+
+            const inputEl = document.getElementById('username')
+            inputEl.value = 25
+
+
+            Element tanasini o’zgartirish
+
+            💡 Tanlab olingan elementni tanasini boshqa HTML element bilan
+            almashtirish uchun elementning innerHTML attributidan
+            foydalanishimiz mumkin
+
+            const element = document.getElementById('sarlavha')
+            lement.innerHTML = 'Yangi sarlavha'    
+
+
+            Element yaratish
+
+                💡 Javascript dasturlash tilida DOM API’ning createElement() metodini
+                chaqirish orqali yangi element yaratish imkoni mavjud
+
+                Umumiy ko’rinishi
+                document.createElement(tagNomi, options)
+
+                const paragraph = document.createElement('p')
+                console.log(paragraph)
+
+                DOM API orqali text yaratish uchun uning createTextNode() metodidan
+                foydalanishimiz mumkin
+
+                const text  = document.createTextNode('bu yrda xat  boshi')
+                console.log(text)
+                                
+            Element qo’shish
+
+                DOM API’ning appendChild() metodini chaqirish orqali element’larni
+                o’zaro qo’shish imkoniyati mavjud
+
+                Umumiy ko’rinishi
+                element.appendChild(anotherElement)
+
+
+                
+                Umumiy ko’rinishi
+                const element = document.getElementById('elementId');
+                element.parentElement;
+                element.children;
+
+                const paragraph = document.createElement('p');
+                const text = document.createTextNode('Bu yerda xatboshi yozilgan')
+                paragraph.appendChild(text);
+
+                const box = document.getElementById('box');
+                box.appendChild(paragraph);
+
+
+                DOM API orqali berilgan node elementning parent (ota-ona) va child
+                (farzand) elementlarini ko’rish imkoniyati mavjud. Parent’ni ko’rish
+                uchun berilgan elementning parentElement yoki parentNode attributiga
+                murojaat qilishimiz mumkin. Children’larni ko’rish uchun esa children
+                yoki childNodes attributiga murojaat qilish kerak bo’ladi
+
+                Umumiy ko’rinishi
+                    const element = document.getElementById('elementId');
+                    element.parentElement;
+                    element.children;
+
+                    element.parentNode;
+                    element.childNodes;
+
+            Element o’chirish
+
+                💡 Javascript dasturlash tilida DOM API’ning remove() metodini chaqirish
+                orqali ko’rsatilgan elementni DOM’dan olib tashlash imkoni mavjud
+
+                Umumiy ko’rinishi
+                element.remove()
+                Misol
+                const paragraph = document.getElementById('elementId');
+                paragraph.remove();
+
+
+            Event
+
+                💡 Events (hodisalar) - foydalanuvchi yoki brauzerning o'zi tomonidan
+                amalga oshirilishi mumkin bo'lgan brauzerda sodir bo'ladigan
+                hodisalar
+
+                Misol uchun:
+                Sahifa yuklandi (page load) hodisasi
+                Foydalanuvchi tugmani bosish hodisasi
+                Foydalanuvchi to’ldirilgan formani jo’natish hodisasi
+
+                💡 Hodisalar yuz berganda unga javob berish (javascript funksiyani
+                ishga turish) orqali veb sahifamizni interaktiv qilishimiz mumkin
+
+                Elementlarga hodisalarni bog’lashni uchta usuli mavjud:
+                Inline event handlers
+                Event handler properties
+                Event listeners
+
+                Inline event handler
+                💡 Event HTML tegining atributi sifatida funksiya bilan ko’rsatib o’tiladi
+                va foydalaniladigan funksiya esa script qismida yozib o’tiladi
+
+                    const changeHeading = () =>{
+                        const heading = document.getElementById('heading')
+                        heading.textContent = 'Yandi sarlavha'
+                    }
+
+                ❗ Inline event’lar ishlatish oson bo’lishiga qaramay, odatda ular
+                    faqatgina o’rganish jarayonida ishlatib o’tiladi. Ko’p loyihalarda inline
+                    event’lar o’rniga boshqa usuldan foydalanishadi
+
+            Inline event properties
+
+                    💡 Inline event properties bundan oldingi usulga juda o’xshash bo’lib
+                    asosiy farqi, endi hodisa ro’y berganda ishga tushadigan funksiya
+                    inline atribut ko’rinishida emas balki tanlab olingan element uchun
+                    attribut ko’rinishida beriladi. Ya’ni funksiya ko’rsatish javascript
+                    dasturimizda amalga oshadi
+
+                    Umumiy ko’rinishi
+                    const element = document.getElementById('elementId');
+                    element.eventName = javascriptFunction;      
+
+                        const changeHeading = () =>{
+                            const heading = document.getElementById('heading')
+                            heading.textContent = 'Yandi sarlavha'
+                        }
+                        const btn = document.getElementById('changeHeadingBtn')
+                        btn.onclick = changeHeading
+
+
+                        Inline event properties usuli bundan oldingi usulimizdan yaxshiroq bo’lganiga qaramay uning ba’zi bir kamchiliklari mavjud. Masalan, bir 
+                        vaqtning o’zida bir nechta handler qo’shish imkoni yo’q 
+
+
+            Event Listeners
+
+                💡 Event listener - elementdagi hodisani tinglab turadi va shu hodisa
+                yuz berganda kerakli funksiyani ishga tushirib yuboradi.
+
+                Umumiy ko’rinishi
+                element.addEventListener(eventName, javascriptFunction);    
+
+                onst changeHeading = () =>{
+                    const heading = document.getElementById('heading')
+                    heading.textContent = 'Yandi sarlavha'
+                }
+                const btn = document.getElementById('changeHeadingBtn')
+                btn.addEventListener('click',changeHeading)
+
+
+
+            Ko’p uchraydigan hodisalar
+
+                💡 Javascript dasturimizda ko’pincha quyidagi hodisalar bilan birga
+                ishlaymiz:
+                - MouseEvents
+                - FormEvents
+                - KeyboardEvents
+
+                Mouse Events
+
+                💡 Mouse Events - eng ko'p ishlatiladigan hodisalar qatoriga kiradi.
+                Ular sichqonchaning tugmachalarini bosish yoki sichqoncha
+                ko'rsatgichini olib borish va harakatlantirishga tegishli bo’lgan
+                hodisalarni o’z ichiga oladi
+
+                Hodisa Tavsifi
+                click Sichqoncha bosilib va qo'yib yuborilganda
+                ishga tushadi
+
+                dblclick Elementga ikki marta bosilganda ishga tushadi
+                
+                mouseenter
+                Sichqoncha elementni ustiga kelganda ishga
+                tushadi
+
+                mouseleave
+                Sichqoncha elementni tark etganda ishga
+                tushadi
+
+                mousemove
+                Sichqoncha element ichida harakat qilganda
+                ishga tushadi
+
+                28. Ko’p uchraydigan hodisalar 2
+
+                Misol
+                const notifyDoubleClick = () => {
+                console.log('Element ikki marta bosildi');
+                }
+                const btn = document.getElementById('btn');
+                btn.addEventListener('dblclick', notifyDoubleClick);
+
+                Form Events
+
+                💡 Form Events - forma bilan ishlaganda yuz beradigan hodisalar
+
+                submit Form jo’natilganda (submit) ishga tushadi
+
+                focus Element fokus bo’lganda ishga tushadi
+                
+                blur Element fokus yo’qotganda ishga tushadi
+                
+                Keyboard Events
+
+                💡 Keyboard Events - klaviatura tugmachasini bosish, qo’yib
+                yuborish va tugmani bosib ushlab turish kabi hodisalarni o’z
+                ichiga oladi
+
+                Hodisa Tavsifi
+                keydown Klaviatura tugmasi bosilganda ishga tushadi
+                
+                keyup
+                Klaviatura tugmasi qo’yib yuborilganda ishga
+                tushadi
+
+                keypress
+                Klaviatura tugmasi bosilib turganda ishga
+                tushadi
+
+                document.addEventListener('keydown', event =>{
+                    console.log('key: ' + event.key)
+                    console.log('code: ' + event.code)
+                })
+
+
+                Amaliyot
+
+                const getRandomNumber = (min,max) =>{
+                    return Math.floor(Math.random()*(max-min + 1))+min;
+                }
+
+                const generate = () =>{
+                    const minEl = document.getElementById('min')
+                    const maxEl = document.getElementById('max')
+                    const min = Number(minEl.value)
+                    const max = Number(maxEl.value)
+
+                    if(minEl.value === '' || maxEl.value === ''){
+                        alert('Iltimos malumot kirgizing')
+                        return
+                    }
+                    if(min>max){
+                        alert('min maxdan kichik bulishi kerak')
+                        return
+                    }
+
+
+                    const placeholderEl = document.querySelector('#placeholder')
+                    placeholderEl.textContent = getRandomNumber(min,max)
+                }
+                const btnEl = document.getElementById('generate')
+                btnEl.addEventListener('click', generate)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
