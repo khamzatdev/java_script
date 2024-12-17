@@ -1,2 +1,2 @@
 # java_script
-Bu yrerda java script darslari mavjud
+Bu yerda java script darslari mavjud
